@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abel López Torres - Ingeniero de Sistemas especializado en Análisis de Datos, Desarrollo Backend y Automatización IoT. Portafolio profesional.">
+    <meta name="keywords" content="Ingeniero de Sistemas, Power BI, Python, SQL, IoT, Desarrollo Web, Cerro de Pasco">
+    <meta name="author" content="Abel Isidoro López Torres">
+
+    <title>Abel López Torres | Ingeniero de Sistemas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">AILT</a>
+            <ul class="nav-menu">
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="img/foto-perfil.jpeg" alt="Abel López Torres" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+                <h1 class="hero-title">
+                    Transformo datos en <span class="gradient-text">soluciones digitales inteligentes</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ingeniero de Sistemas | Desarrollo Backend & Análisis de Datos | Automatización IoT
+                </p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <i data-lucide="code"></i>
+                        Ver Proyectos
+                    </a>
+                    <a href="assets/cv-abel-lopez.pdf" download class="btn btn-secondary">
+                        <i data-lucide="download"></i>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="sobre-mi-content">
+                <div class="sobre-mi-text">
+                    <p>
+                        Ingeniero de Sistemas y Computación egresado de la <strong>Universidad Nacional
+                            Daniel Alcides Carrión</strong>, con experiencia práctica en optimización de procesos
+                        administrativos y soporte tecnológico en el sector minero.
+                    </p>
+                    <p>
+                        Me especializo en <strong>análisis de datos</strong>, desarrollo de
+                        soluciones backend y administración de bases de datos. Mi enfoque combina conocimiento
+                        técnico sólido con visión empresarial, permitiéndome crear herramientas digitales que
+                        mejoran la eficiencia operativa.
+                    </p>
+                    <p>
+                        Poseo experiencia demostrable en gestión de sistemas de información, soporte técnico
+                        TIC y elaboración de reportes gerenciales que facilitan la toma de decisiones basadas
+                        en datos.
+                    </p>
+                </div>
+                <div class="sobre-mi-highlights">
+                    <div class="highlight-card">
+                        <i data-lucide="graduation-cap"></i>
+                        <h3>Educación</h3>
+                        <p>Ing. Sistemas y Computación<br>UNDAC</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i data-lucide="briefcase"></i>
+                        <h3>Experiencia</h3>
+                        <p>Sector Minero<br>Soporte TIC & Análisis</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i data-lucide="map-pin"></i>
+                        <h3>Ubicación</h3>
+                        <p>Cerro de Pasco<br>Perú</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+
+                <!-- Proyecto 1: Sistema Inventario IA -->
+                <div class="proyecto-card" data-proyecto="1">
+                    <div class="proyecto-image">
+                        <div class="proyecto-placeholder gradient-ai">
+                            <i data-lucide="brain"></i>
+                        </div>
+                    </div>
+                    <div class="proyecto-content">
+                        <h3>Smart Inventory Management System</h3>
+                        <p>Sistema inteligente de control de inventarios con módulo de ventas y análisis predictivo
+                            mediante IA</p>
+                        <div class="proyecto-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">IA/ML</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal(1)">
+                            <i data-lucide="external-link"></i>
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: IoT Datacenter -->
+                <div class="proyecto-card" data-proyecto="2">
+                    <div class="proyecto-image">
+                        <div class="proyecto-placeholder gradient-iot">
+                            <i data-lucide="activity"></i>
+                        </div>
+                    </div>
+                    <div class="proyecto-content">
+                        <h3>IoT Datacenter Environmental Control</h3>
+                        <p>Sistema de monitoreo y control automatizado de condiciones ambientales con Arduino/ESP32</p>
+                        <div class="proyecto-tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Sensores</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal(2)">
+                            <i data-lucide="external-link"></i>
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Librería Web -->
+                <div class="proyecto-card" data-proyecto="3">
+                    <div class="proyecto-image">
+                        <div class="proyecto-placeholder gradient-web">
+                            <i data-lucide="globe"></i>
+                        </div>
+                    </div>
+                    <div class="proyecto-content">
+                        <h3>Librería Online - E-commerce Platform</h3>
+                        <p>Plataforma web completa para gestión y venta de libros con catálogo interactivo</p>
+                        <div class="proyecto-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Backend</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal(3)">
+                            <i data-lucide="external-link"></i>
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section habilidades">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="habilidades-grid">
+
+                <!-- Desarrollo Backend -->
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3>Desarrollo Backend</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>SQL (MySQL, PostgreSQL, Oracle, SQL Server)</li>
+                    </ul>
+                </div>
+
+                <!-- Análisis de Datos -->
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3>Análisis de Datos</h3>
+                    <ul class="skill-list">
+                        <li>Power BI (Dashboards & Reportes)</li>
+                        <li>SQL Avanzado</li>
+                        <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
+                        <li>Data Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Desarrollo Frontend -->
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Desarrollo Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <!-- Herramientas & Metodologías -->
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3>Herramientas & Metodologías</h3>
+                    <ul class="skill-list">
+                        <li>Git & Control de Versiones</li>
+                        <li>Scrum/Agile</li>
+                        <li>Linux & Windows Server</li>
+                        <li>Arduino & ESP32 (IoT)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <h2 class="section-title">Conectemos</h2>
+            <div class="contacto-content">
+                <p class="contacto-text">
+                    ¿Tienes un proyecto en mente o quieres colaborar? Estoy disponible para nuevas oportunidades.
+                </p>
+                <div class="contacto-grid">
+                    <a href="https://wa.me/51921817289" target="_blank" class="contacto-card">
+                        <i data-lucide="message-circle"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+51 921 817 289</p>
+                    </a>
+                    <a href="mailto:alopezt05@outlook.es" class="contacto-card">
+                        <i data-lucide="mail"></i>
+                        <h3>Email</h3>
+                        <p>alopezt05@outlook.es</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alopezt05" target="_blank" class="contacto-card">
+                        <i data-lucide="linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>in/alopezt05</p>
+                    </a>
+                    <a href="https://github.com/alopezt05" target="_blank" class="contacto-card">
+                        <i data-lucide="github"></i>
+                        <h3>GitHub</h3>
+                        <p>@alopezt05</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Abel Isidoro López Torres. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51921817289" target="_blank" class="whatsapp-float" title="Contactar por WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- MODAL PROYECTOS -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
