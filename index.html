@@ -30,9 +30,10 @@
     <!-- NAVEGACIÓN -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#hero" class="logo">AILT</a>
+            <a href="#hero" class="logo">Abel López</a>
             <ul class="nav-menu">
                 <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
                 <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
                 <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -51,13 +52,16 @@
             <div class="hero-content">
                 <div class="hero-image">
                     <img src="img/foto-perfil.jpeg" alt="Abel López Torres" class="profile-img">
-                    <div class="image-glow"></div>
                 </div>
                 <h1 class="hero-title">
                     TI, redes y datos que <span class="gradient-text">funcionan a 4,800 m s. n. m.</span>
                 </h1>
                 <p class="hero-subtitle">
                     Ingeniero de Sistemas | Infraestructura TI & Redes en Minería | Análisis de Datos & Automatización
+                </p>
+                <p class="hero-meta">
+                    <i data-lucide="map-pin"></i>
+                    Cerro de Pasco, Perú · Disponible para régimen atípico a nivel nacional
                 </p>
                 <div class="hero-buttons">
                     <a href="#proyectos" class="btn btn-primary">
@@ -117,6 +121,37 @@
                         <h3>Ubicación</h3>
                         <p>Cerro de Pasco<br>Perú</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="section experiencia">
+        <div class="container">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2026 — Actualidad</span>
+                    <h3>Técnico TI — Infraestructura y Sistemas</h3>
+                    <p class="timeline-org">Unidad minera · Oyón, Lima (régimen atípico 20x10)</p>
+                    <p>Responsable del área de TI como contraguardia del jefe de TI: soporte a operaciones,
+                        administración del enlace satelital Starlink, respaldo corporativo (NAS Synology,
+                        snapshots Btrfs) y automatización de controles operativos con n8n.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2024 — 2025</span>
+                    <h3>Análisis de Datos & Soporte TI</h3>
+                    <p class="timeline-org">Ecoserm Rancas · Cerro de Pasco</p>
+                    <p>Reportes gerenciales sobre SAP Business One HANA y dashboards en Power BI para
+                        la toma de decisiones; soporte a sistemas de información y usuarios.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2023 — 2024</span>
+                    <h3>Prácticas TI — Redes y Telecomunicaciones</h3>
+                    <p class="timeline-org">Cerro SAC / Volcan · Cerro de Pasco</p>
+                    <p>Tendido y empalme de fibra óptica en galerías subterráneas, cableado estructurado
+                        Cat6 y equipos Cisco en operación minera en producción.</p>
                 </div>
             </div>
         </div>
@@ -200,8 +235,56 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 4: Pipeline BI minero -->
+                <!-- Proyecto 4: SaaS reportes ambientales -->
                 <div class="proyecto-card" data-proyecto="4">
+                    <div class="proyecto-image">
+                        <div class="proyecto-placeholder gradient-saas">
+                            <i data-lucide="leaf"></i>
+                        </div>
+                    </div>
+                    <div class="proyecto-content">
+                        <h3>SaaS de Reportes Ambientales Mineros</h3>
+                        <p>Plataforma que centraliza reportes ambientales recibidos por correo y extrae sus datos
+                            automáticamente con LLMs, con revisión humana solo para casos de baja confianza</p>
+                        <div class="proyecto-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">LLMs</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal(4)">
+                            <i data-lucide="external-link"></i>
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5: Plataforma ventas WhatsApp -->
+                <div class="proyecto-card" data-proyecto="5">
+                    <div class="proyecto-image">
+                        <div class="proyecto-placeholder gradient-web">
+                            <i data-lucide="shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="proyecto-content">
+                        <h3>Plataforma de Ventas & Catálogo por WhatsApp</h3>
+                        <p>Sistema self-hosted multi-tenant de ventas con catálogo digital y atención
+                            automatizada por WhatsApp para pequeños negocios</p>
+                        <div class="proyecto-tags">
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">PostgREST</span>
+                            <span class="tag">n8n</span>
+                            <span class="tag">Next.js</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal(5)">
+                            <i data-lucide="external-link"></i>
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6: Pipeline BI minero -->
+                <div class="proyecto-card" data-proyecto="6">
                     <div class="proyecto-image">
                         <div class="proyecto-placeholder gradient-ai">
                             <i data-lucide="bar-chart-3"></i>
@@ -217,7 +300,7 @@
                             <span class="tag">SQL</span>
                             <span class="tag">ETL</span>
                         </div>
-                        <button class="btn btn-outline" onclick="openModal(4)">
+                        <button class="btn btn-outline" onclick="openModal(6)">
                             <i data-lucide="external-link"></i>
                             Ver Detalles
                         </button>

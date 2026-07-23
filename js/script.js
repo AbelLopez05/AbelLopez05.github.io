@@ -66,10 +66,10 @@ function initializeAnimations() {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 14, 39, 0.98)';
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 217, 255, 0.1)';
+        navbar.style.background = 'rgba(13, 17, 23, 0.98)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.4)';
     } else {
-        navbar.style.background = 'rgba(10, 14, 39, 0.95)';
+        navbar.style.background = 'rgba(13, 17, 23, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
@@ -165,6 +165,65 @@ const proyectosInfo = {
         tags: ["Synology", "Btrfs", "Backups", "SMB", "Continuidad de datos"]
     },
     4: {
+        title: "SaaS de Reportes Ambientales Mineros",
+        description: `
+            <h2>Plataforma de Consolidación de Reportes Ambientales</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>En las operaciones mineras peruanas, los reportes de monitoreo ambiental llegan por correo en formatos distintos y su consolidación es un trabajo manual, lento y propenso a errores.</p>
+
+            <h3>⚙️ La Solución</h3>
+            <ul>
+                <li><strong>Recepción centralizada:</strong> los reportes llegan por email y entran automáticamente al sistema</li>
+                <li><strong>Extracción con LLMs:</strong> los datos se extraen automáticamente de los documentos con modelos de lenguaje, con arquitectura de proveedor intercambiable</li>
+                <li><strong>Revisión por confianza:</strong> los reportes con extracción de baja confianza se marcan para revisión humana; el resto pasa directo al historial — sin cuellos de botella de aprobación</li>
+                <li><strong>Multi-cliente:</strong> diseño SaaS pensado para servir a varias operaciones a la vez</li>
+            </ul>
+
+            <h3>🛠️ Stack Tecnológico</h3>
+            <ul>
+                <li><strong>Backend:</strong> Python 3.12 + FastAPI + SQLAlchemy async</li>
+                <li><strong>Base de Datos:</strong> PostgreSQL (Supabase)</li>
+                <li><strong>Frontend:</strong> Next.js + TypeScript + Tailwind CSS</li>
+                <li><strong>Orquestación:</strong> n8n self-hosted, Docker Compose</li>
+                <li><strong>IA:</strong> extracción de datos con LLMs (arquitectura desacoplada del proveedor)</li>
+            </ul>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>Diseño de un producto SaaS completo —backend, frontend, infraestructura e IA aplicada— para resolver un problema regulatorio real del sector minero.</p>
+        `,
+        tags: ["FastAPI", "Next.js", "PostgreSQL", "n8n", "LLMs", "Docker"]
+    },
+    5: {
+        title: "Plataforma de Ventas & Catálogo por WhatsApp",
+        description: `
+            <h2>Sistema Multi-tenant de Ventas con Atención por WhatsApp</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>Los pequeños negocios venden por WhatsApp de forma manual: sin catálogo estructurado, sin registro de pedidos y respondiendo cada mensaje a mano. Eso no escala y se pierden ventas.</p>
+
+            <h3>⚙️ La Solución</h3>
+            <ul>
+                <li><strong>Catálogo digital:</strong> productos administrables desde una interfaz web</li>
+                <li><strong>Atención automatizada:</strong> flujos de conversación por WhatsApp conectados al catálogo y a los pedidos</li>
+                <li><strong>Multi-tenant:</strong> una sola instalación sirve a varios negocios con datos aislados</li>
+                <li><strong>Self-hosted:</strong> todo el stack corre en infraestructura propia con Docker</li>
+            </ul>
+
+            <h3>🛠️ Stack Tecnológico</h3>
+            <ul>
+                <li><strong>Base de Datos:</strong> PostgreSQL con API automática vía PostgREST</li>
+                <li><strong>Automatización:</strong> n8n (flujos de conversación y lógica de negocio)</li>
+                <li><strong>WhatsApp:</strong> Evolution API</li>
+                <li><strong>Frontend:</strong> Next.js</li>
+            </ul>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>Arquitectura de producto multi-tenant con componentes open source, integrando mensajería, base de datos y frontend en un sistema que opera solo.</p>
+        `,
+        tags: ["PostgreSQL", "PostgREST", "n8n", "Evolution API", "Next.js", "Docker"]
+    },
+    6: {
         title: "Pipeline de Datos & BI Minero",
         description: `
             <h2>Pipeline de Datos Operativos con Dashboards en Power BI</h2>
@@ -308,6 +367,6 @@ lucide.createIcons();
 // ============================================
 // CONSOLE LOG PERSONALIZADO (Easter Egg)
 // ============================================
-console.log('%c¡Hola Developer! 👋', 'color: #00D9FF; font-size: 20px; font-weight: bold;');
-console.log('%cSi estás revisando mi código, significa que eres de los míos 🚀', 'color: #7C3AED; font-size: 14px;');
-console.log('%c¡Conectemos en LinkedIn! linkedin.com/in/alopezt05', 'color: #00D9FF; font-size: 12px;');
+console.log('%c¡Hola Developer! 👋', 'color: #F5A524; font-size: 20px; font-weight: bold;');
+console.log('%cSi estás revisando mi código, significa que eres de los míos 🚀', 'color: #8B949E; font-size: 14px;');
+console.log('%c¡Conectemos en LinkedIn! linkedin.com/in/alopezt05', 'color: #F5A524; font-size: 12px;');
