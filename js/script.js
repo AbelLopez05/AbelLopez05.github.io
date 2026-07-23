@@ -104,6 +104,8 @@ const proyectosInfo = {
 
             <h3>🎓 Lo Que Demuestra</h3>
             <p>Capacidad de operar conectividad crítica en condiciones extremas y de diagnosticar problemas de red con método y evidencia, no a ciegas: instrumentar primero, concluir después.</p>
+
+            <p><a href="https://github.com/AbelLopez05/monitor-red-mina" target="_blank" style="color: var(--color-primary); font-weight: 600;">📂 Ver código: sistema de monitoreo de red minera en GitHub →</a></p>
         `,
         tags: ["Starlink", "Redes", "Linux", "systemd", "Bash", "DNS"]
     },
