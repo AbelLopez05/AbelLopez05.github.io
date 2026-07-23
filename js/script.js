@@ -81,109 +81,116 @@ window.addEventListener('scroll', () => {
 // Información detallada de cada proyecto
 const proyectosInfo = {
     1: {
-        title: "Smart Inventory Management System",
+        title: "Enlace Satelital Starlink + Monitor de Red",
         description: `
-            <h2>Sistema Inteligente de Gestión de Inventarios</h2>
-            
-            <h3>🎯 Descripción del Proyecto</h3>
-            <p>Sistema completo de control de inventarios que integra inteligencia artificial para predicción de demanda y optimización de stock. Incluye módulo de ventas, reportes gerenciales en tiempo real y análisis predictivo.</p>
-            
-            <h3>✨ Características Principales</h3>
+            <h2>Conectividad Satelital y Monitoreo de Red en Mina</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>En una unidad minera a más de 4,000 m s. n. m., sin cobertura de operadores tradicionales, la conectividad depende de un enlace satelital Starlink. La red presentaba desconexiones intermitentes que afectaban operaciones y eran difíciles de diagnosticar: ¿era la antena, el router, el DNS o la red interna?</p>
+
+            <h3>⚙️ La Solución</h3>
             <ul>
-                <li><strong>Control de Inventario:</strong> Gestión de entradas/salidas con trazabilidad completa</li>
-                <li><strong>Módulo de Ventas:</strong> Proceso de venta integrado con actualización automática de stock</li>
-                <li><strong>Predicción con IA:</strong> Análisis de patrones de consumo y predicción de demanda</li>
-                <li><strong>Dashboard Ejecutivo:</strong> Visualización de KPIs en tiempo real</li>
-                <li><strong>Alertas Inteligentes:</strong> Notificaciones automáticas de stock mínimo y productos críticos</li>
-                <li><strong>Reportes Gerenciales:</strong> Generación automática de informes de ventas y rotación</li>
+                <li><strong>Administración del enlace:</strong> configuración y operación del servicio Starlink como salida principal a internet de la unidad</li>
+                <li><strong>Monitor de red como servicio Linux (systemd):</strong> script que registra de forma continua latencia, pérdida de paquetes, resolución DNS y estado del enlace en cada capa</li>
+                <li><strong>Diagnóstico por descarte:</strong> con los registros se descartaron la antena y la tarjeta de red como causas, acotando la falla a la capa de red local (router/DNS/segmentación)</li>
             </ul>
-            
+
             <h3>🛠️ Stack Tecnológico</h3>
             <ul>
-                <li><strong>Backend:</strong> Python (Flask/Django)</li>
-                <li><strong>Base de Datos:</strong> MySQL con optimización de consultas</li>
-                <li><strong>Machine Learning:</strong> Scikit-learn para predicción de demanda</li>
-                <li><strong>Visualización:</strong> Dashboard interactivo con gráficos dinámicos</li>
-                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (AJAX)</li>
+                <li><strong>Enlace:</strong> Starlink (terminal, router y app de gestión)</li>
+                <li><strong>Monitoreo:</strong> Bash/Python, systemd service, logs estructurados</li>
+                <li><strong>Diagnóstico:</strong> ping/mtr, análisis DNS, revisión de topología de red</li>
             </ul>
-            
-            <h3>🎓 Aprendizajes Clave</h3>
-            <p>Este proyecto me permitió integrar conocimientos de desarrollo backend, bases de datos relacionales, y aplicar conceptos de machine learning a un caso de uso empresarial real. Aprendí a diseñar arquitecturas escalables y a crear interfaces intuitivas para usuarios no técnicos.</p>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>Capacidad de operar conectividad crítica en condiciones extremas y de diagnosticar problemas de red con método y evidencia, no a ciegas: instrumentar primero, concluir después.</p>
         `,
-        tags: ["Python", "IA/ML", "MySQL", "Dashboard", "Scikit-learn", "Flask"]
+        tags: ["Starlink", "Redes", "Linux", "systemd", "Bash", "DNS"]
     },
     2: {
-        title: "IoT Datacenter Environmental Control",
+        title: "Detección de Duplicados en Comedor Minero",
         description: `
-            <h2>Sistema IoT de Control Ambiental para Datacenter</h2>
-            
-            <h3>🎯 Descripción del Proyecto</h3>
-            <p>Sistema de monitoreo y control automatizado de condiciones ambientales en datacenters utilizando Arduino y ESP32. Incluye sensores de temperatura y humedad con activación automática de sistemas de ventilación cuando se superan umbrales críticos (>80% humedad).</p>
-            
-            <h3>✨ Características Principales</h3>
+            <h2>Pipeline Antifraude para Comedor de Mina</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>Los pedidos de almuerzo se registraban por WhatsApp y la asistencia del personal por marcador biométrico — dos sistemas que no se hablaban entre sí. Esto permitía que se registraran y cobraran almuerzos duplicados sin que nadie pudiera detectarlo manualmente.</p>
+
+            <h3>⚙️ La Solución</h3>
             <ul>
-                <li><strong>Monitoreo en Tiempo Real:</strong> Lectura continua de temperatura y humedad</li>
-                <li><strong>Control Automatizado:</strong> Activación inteligente de ventiladores cuando humedad > 80%</li>
-                <li><strong>Dashboard Web:</strong> Visualización de datos históricos y estado actual</li>
-                <li><strong>Sistema de Alertas:</strong> Notificaciones cuando se superan valores críticos</li>
-                <li><strong>Registro de Datos:</strong> Almacenamiento de lecturas para análisis de tendencias</li>
-                <li><strong>Interfaz de Control:</strong> Posibilidad de control manual remoto de dispositivos</li>
+                <li><strong>Ingesta automática:</strong> captura de pedidos desde WhatsApp mediante flujos de n8n</li>
+                <li><strong>Cruce de fuentes:</strong> correlación de pedidos contra marcaciones biométricas en PostgreSQL</li>
+                <li><strong>Detección de duplicados:</strong> reglas que identifican registros dobles por persona y fecha</li>
+                <li><strong>Infraestructura reproducible:</strong> todo el stack (n8n + PostgreSQL) desplegado en contenedores Docker</li>
             </ul>
-            
+
             <h3>🛠️ Stack Tecnológico</h3>
             <ul>
-                <li><strong>Hardware:</strong> Arduino Uno, ESP32 (WiFi)</li>
-                <li><strong>Sensores:</strong> DHT22 (Temperatura y Humedad)</li>
-                <li><strong>Actuadores:</strong> Relés para control de ventiladores y luces</li>
-                <li><strong>Comunicación:</strong> Protocolo MQTT para IoT</li>
-                <li><strong>Backend:</strong> Node.js / Python para procesamiento de datos</li>
-                <li><strong>Dashboard:</strong> Interface web responsiva con gráficos en tiempo real</li>
-                <li><strong>Base de Datos:</strong> InfluxDB para series temporales</li>
+                <li><strong>Automatización:</strong> n8n (flujos de ingesta y procesamiento)</li>
+                <li><strong>Base de Datos:</strong> PostgreSQL</li>
+                <li><strong>Infraestructura:</strong> Docker / Docker Compose, self-hosted</li>
+                <li><strong>Integración:</strong> API de WhatsApp, datos de marcador biométrico</li>
             </ul>
-            
-            <h3>⚙️ Funcionamiento</h3>
-            <p>El ESP32 lee los sensores cada 5 segundos y envía datos al servidor vía WiFi. Cuando la humedad supera el 80%, el sistema activa automáticamente los ventiladores. El dashboard web permite visualizar datos históricos, configurar umbrales personalizados y controlar dispositivos manualmente si es necesario.</p>
-            
-            <h3>🎓 Aprendizajes Clave</h3>
-            <p>Este proyecto me introdujo al mundo del IoT y la automatización industrial. Aprendí sobre protocolos de comunicación inalámbrica, programación de microcontroladores, diseño de circuitos electrónicos y creación de sistemas de monitoreo en tiempo real.</p>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>Integración de sistemas que no fueron diseñados para hablarse, automatización de un control operativo real y despliegue self-hosted de principio a fin.</p>
         `,
-        tags: ["Arduino", "ESP32", "IoT", "Sensores DHT22", "MQTT", "Node.js", "Dashboard"]
+        tags: ["n8n", "PostgreSQL", "Docker", "WhatsApp API", "Automatización"]
     },
     3: {
-        title: "Librería Online - E-commerce Platform",
+        title: "Respaldo Corporativo Anti-borrado",
         description: `
-            <h2>Plataforma E-commerce para Librería</h2>
-            
-            <h3>🎯 Descripción del Proyecto</h3>
-            <p>Plataforma web completa para gestión y venta de libros online. Sistema con catálogo interactivo, carrito de compras, gestión de inventario y panel administrativo para control de pedidos y productos.</p>
-            
-            <h3>✨ Características Principales</h3>
+            <h2>Sistema de Backup con Recuperación ante Borrados</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>La información operativa de la unidad se almacenaba en carpetas compartidas sin protección: un borrado accidental —o malintencionado— significaba pérdida definitiva de información de trabajo.</p>
+
+            <h3>⚙️ La Solución</h3>
             <ul>
-                <li><strong>Catálogo de Productos:</strong> Búsqueda avanzada por título, autor, género y editorial</li>
-                <li><strong>Sistema de Carrito:</strong> Añadir/eliminar productos con cálculo automático de totales</li>
-                <li><strong>Gestión de Usuarios:</strong> Registro, login y perfil de cliente</li>
-                <li><strong>Panel Administrativo:</strong> CRUD completo de productos, categorías y pedidos</li>
-                <li><strong>Control de Inventario:</strong> Actualización automática de stock tras cada venta</li>
-                <li><strong>Sistema de Búsqueda:</strong> Filtros múltiples y ordenamiento de resultados</li>
-                <li><strong>Diseño Responsive:</strong> Totalmente adaptable a dispositivos móviles</li>
+                <li><strong>NAS Synology centralizado:</strong> carpetas compartidas de red como repositorio corporativo único</li>
+                <li><strong>Papelera de red (#recycle):</strong> primera línea de recuperación ante borrados accidentales</li>
+                <li><strong>Snapshots Btrfs programados:</strong> instantáneas diarias automáticas que permiten restaurar el estado previo incluso si alguien vacía la papelera</li>
+                <li><strong>Operación con restricciones reales:</strong> el diseño contempla cortes de energía programados de la unidad, que obligan a proteger la persistencia de snapshots</li>
             </ul>
-            
+
             <h3>🛠️ Stack Tecnológico</h3>
             <ul>
-                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (Vanilla JS)</li>
-                <li><strong>Backend:</strong> Python (Flask) / PHP (según implementación)</li>
-                <li><strong>Base de Datos:</strong> MySQL con relaciones normalizadas</li>
-                <li><strong>Seguridad:</strong> Validación de formularios, SQL injection prevention</li>
-                <li><strong>Sesiones:</strong> Manejo de sesiones de usuario y carrito persistente</li>
+                <li><strong>Hardware:</strong> NAS Synology</li>
+                <li><strong>Filesystem:</strong> Btrfs con snapshots programados</li>
+                <li><strong>Red:</strong> SMB/carpetas compartidas Windows, permisos por usuario</li>
             </ul>
-            
-            <h3>📊 Arquitectura de Base de Datos</h3>
-            <p>Diseño relacional con tablas principales: usuarios, productos, categorías, pedidos, detalle_pedidos. Implementación de claves foráneas y triggers para mantenimiento de integridad referencial.</p>
-            
-            <h3>🎓 Aprendizajes Clave</h3>
-            <p>Este proyecto me permitió trabajar con un stack completo (full-stack), desde el diseño de base de datos hasta la interfaz de usuario. Aprendí sobre arquitectura MVC, manejo de sesiones, seguridad web y optimización de consultas SQL para mejorar el rendimiento.</p>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>Diseño de continuidad de datos con capas de defensa (papelera + snapshots), pensado para las condiciones reales de una operación minera, no para un laboratorio.</p>
         `,
-        tags: ["HTML/CSS", "JavaScript", "Python/PHP", "MySQL", "MVC", "E-commerce"]
+        tags: ["Synology", "Btrfs", "Backups", "SMB", "Continuidad de datos"]
+    },
+    4: {
+        title: "Pipeline de Datos & BI Minero",
+        description: `
+            <h2>Pipeline de Datos Operativos con Dashboards en Power BI</h2>
+
+            <h3>🎯 El Problema</h3>
+            <p>Los datos operativos llegaban dispersos y sin estructura: armar un reporte gerencial implicaba trabajo manual repetitivo y propenso a errores.</p>
+
+            <h3>⚙️ La Solución</h3>
+            <ul>
+                <li><strong>Extracción y limpieza:</strong> procesamiento de las fuentes con Python (Pandas) y SQL</li>
+                <li><strong>Modelado:</strong> estructura de datos pensada para análisis y series de tiempo</li>
+                <li><strong>Visualización:</strong> dashboards en Power BI con indicadores operativos para toma de decisiones</li>
+                <li><strong>Reproducibilidad:</strong> el pipeline se puede volver a ejecutar de punta a punta con datos nuevos</li>
+            </ul>
+
+            <h3>🛠️ Stack Tecnológico</h3>
+            <ul>
+                <li><strong>Procesamiento:</strong> Python (Pandas, NumPy), SQL</li>
+                <li><strong>Visualización:</strong> Power BI (modelado y dashboards)</li>
+                <li><strong>Experiencia relacionada:</strong> reportes gerenciales sobre SAP Business One HANA</li>
+            </ul>
+
+            <h3>🎓 Lo Que Demuestra</h3>
+            <p>El ciclo completo de datos —de fuente cruda a dashboard gerencial— aplicado al contexto minero, donde los reportes alimentan decisiones operativas reales.</p>
+        `,
+        tags: ["Power BI", "Python", "SQL", "ETL", "Pandas"]
     }
 };
 
